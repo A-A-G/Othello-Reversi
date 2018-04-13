@@ -1,0 +1,46 @@
+.dialog
+{
+    -fx-base: rgb(0, 0, 0);
+}
+
+.dialog-pane > .button-bar > .container 
+{
+    -fx-base: -fx-default-button;
+}
+
+.dialog > *.label.content
+{
+    -fx-font-size: 14px;
+}
+
+.dialog *.header-panel *.label
+{
+	-fx-font-weight: bold;
+}
+
+.rule-dialog > *.label.content
+{
+    -fx-font-size: 12px;
+}
+
+.rule-dialog *.header-panel *.label
+{
+	-fx-font-size: 30px;
+}
+
+.highscore-dialog > *.table-view.content
+{
+	-fx-base: #ececec;
+}
+
+.highscore-dialog *.header-panel *.label
+{
+	-fx-font-size: 30px;
+	-fx-alignment: center;
+}
+
+.text-field.error 
+{
+  -fx-text-box-border: red;
+  -fx-focus-color: red;
+}

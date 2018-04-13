@@ -1,0 +1,38 @@
+.squareYellow
+{
+	-fx-background-color: rgb(255.0, 255.0, 0.0);
+	-fx-background-radius: 5.0;
+	-fx-background-insets: 0.5;
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 15.0, 0.5, 0.0, 0.0);
+}
+
+.squareYellow:hover
+{
+	-fx-background-color: rgb(100.0, 255.0, 50.0);
+}
+
+.squareGreen
+{
+	-fx-background-color: rgb(50.0, 200.0, 50.0);
+	-fx-background-radius: 5.0;
+	-fx-background-insets: 0.5;
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 15.0, 0.5, 0.0, 0.0);
+}
+
+.squareGreen:hover
+{
+	-fx-background-color: rgb(50.0, 150.0, 50.0);
+}
+
+.squareGrey
+{
+	-fx-background-color: rgb(200.0, 200.0, 200.0);
+	-fx-background-radius: 5.0;
+	-fx-background-insets: 0.5;
+	-fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 15.0, 0.5, 0.0, 0.0);
+}
+
+.squareGrey:hover
+{
+	-fx-background-color: rgb(150.0, 150.0, 150.0);
+}

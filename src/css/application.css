@@ -1,0 +1,53 @@
+Board
+{
+	-fx-background-color: black;
+}
+
+BorderPane
+{
+	-fx-background-color: rgb(0.0, 0.0, 0.0);
+}
+
+Label
+{
+	-fx-font-size: 20.0px;
+	-fx-text-fill: white;
+	-fx-background-color: rgb(0.0, 0.0, 0.0);
+}
+
+.label.error
+{
+	-fx-background-color: red;
+}
+
+.label.highred {
+	-fx-background-color: rgba(255.0, 0.0, 0.0, 0.5);
+}
+
+.label.highgreen {
+	-fx-background-color: rgba(0.0, 128.0, 0.0, 0.5);
+}
+
+.label.highwhite {
+	-fx-background-color: rgba(255.0, 255.0, 255.0, 0.5);
+}
+
+.label.highyellow {
+	-fx-background-color: rgba(255.0, 255.0, 0.0, 0.5);
+}
+
+.label.highblue {
+	-fx-background-color: rgba(0.0, 0.0, 255.0, 0.5);
+}
+
+.context-menu
+{
+	-fx-base: rgb(0.0, 0.0, 0.0);
+}
+
+.menu-bar
+{
+	-fx-base: rgb(0.0, 0.0, 0.0);
+}
+
+

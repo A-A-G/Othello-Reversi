@@ -1,0 +1,13 @@
+.table-column
+{
+	-fx-font-size: 14px;
+	-fx-alignment: center;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+ 
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}

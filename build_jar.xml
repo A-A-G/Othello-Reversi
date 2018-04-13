@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ReversiOthelloJar" default="do-dist" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+
+	<target name="init-fx-tasks">
+		<path id="fxant">
+			<filelist>
+				<file name="${java.home}/../lib/ant-javafx.jar" />
+				<file name="${java.home}/lib/jfxrt.jar" />
+				<file name="${basedir}/res/" />
+			</filelist>
+		</path>
+		<taskdef resource="com/sun/javafx/tools/ant/antlib.xml" uri="javafx:com.sun.javafx.tools.ant" classpathref="fxant" />
+	</target>
+
+	<target name='do-compile'>
+		<delete dir="build" />
+		<mkdir dir="build" />
+		<mkdir dir="build/classes" />
+		<javac includeantruntime="false" debug="true" target="1.8" srcdir="${basedir}/src" destdir="build/classes" encoding="Cp1252" />
+		<copy todir="build/classes">
+			<fileset dir="src" />
+		</copy>
+	</target>
+
+	<target name="do-dist" depends="do-compile, init-fx-tasks">
+		<mkdir dir="build/dist" />
+
+		<fx:application id="fxApplication" name="ReversiOthello" mainClass="main.Start" toolkit="fx" version="0.1" />
+
+		<fx:jar destfile="build/dist/ReversiOthello.jar">
+			<fx:application refid="fxApplication" />
+			<fileset dir="build/classes" />
+			<manifest>
+				<attribute name="Implementation-Vendor" value="Alexander Artiga Gonzalez" />
+				<attribute name="Implementation-Title" value="ReversiOthello" />
+				<attribute name="Implementation-Version" value="0.1" />
+				<attribute name="JavaFX-Feature-Proxy" value="None" />
+			</manifest>
+		</fx:jar>
+	</target>
+
+</project>

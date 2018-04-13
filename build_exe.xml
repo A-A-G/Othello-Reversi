@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ReversiOthelloExe" default="do-deploy" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<import file="build_jar.xml" as="build_jar" />
+
+	<target name="do-deploy" depends="build_jar.do-dist">
+		<mkdir dir="build/deploy" />
+
+		<fx:resources id="appRes">
+			<fx:fileset dir="build/dist" includes="ReversiOthello.jar" />
+		</fx:resources>
+
+		<mkdir dir="build/deploy" />
+		<fx:deploy verbose="true" embedJNLP="true" extension="false" includeDT="false" offlineAllowed="true" outdir="${basedir}/build/deploy" outfile="ReversiOthello" nativeBundles="exe" updatemode="background">
+			<fx:platform basedir="${java.home}" />
+			<fx:info title="ReversiOthello" vendor="Alexander Artiga Gonzalez" />
+			<fx:application refId="fxApplication" />
+			<fx:resources refid="appRes" />
+		</fx:deploy>
+	</target>
+
+</project>
